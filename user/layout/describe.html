@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://github.com/gon123123/gon123123/blob/master/LOGO.JPG?raw=true"
+        type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .describe {
+        max-width: 50%;
+        max-height: 50%;
+        background-color: red;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+</style>
+
+<body>
+    <div class="describe">
+        <div class="content_title">
+            <p>QUESTION CHOOSE <i class="fas fa-check"></i></p>
+        </div>
+        <div class="content_box">
+            <p>&#45;time for this round 10 minutes </p>
+            <p>&#45;In this there are 5 questions, choose the correct answer </p>
+            <form action="">
+                Tên:<br>
+                <input id="vip" type="text" name="ten" value="An">
+            </form>
+            <button onclick="myFunction();">Vô hiệu hóa</button>
+            <span id="demo">00</span>:<span id="demo2">00</span>
+            <p id="vip2"></p>
+        </div>
+    </div>
+</body>
+<script>
+    function myFunction() {
+        var elem = document.getElementById('demo');
+        var elem2 = document.getElementById('demo2');
+        var t1 = 0;
+        var t2 = 0;
+        var id = setInterval(frame, 1000);
+
+        function frame() {
+            if (t1 == 15) {
+                clearInterval(id);
+                document.getElementById("vip").disabled = true;
+            } else {
+                t2++;
+                if (t2 < 60) {
+                    if (t2 < 10) {
+                        elem2.innerHTML = "0" + t2;
+                    } else {
+                        elem2.innerHTML = t2;
+                    }
+                } else {
+                    t1++;
+                    t2 = 0;
+                    elem2.innerHTML = "00";
+                    elem.innerHTML = "0" + t1;
+                }
+            }
+        }
+    }
+</script>
+
+</html>

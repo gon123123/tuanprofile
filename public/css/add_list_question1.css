@@ -1,0 +1,156 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+:root {
+    --color_white: #ffff;
+    --color_white2: rgb(231, 226, 226);
+    --color_white3: rgb(201, 187, 187);
+    /* --color_white4: rgb(71, 65, 65); */
+    --color_yellow: #ffe800;
+    --color_gray: rgba(143, 143, 143, 0.432);
+    --color_gray2: #6c757d;
+    --color_cyan: #61a6ab;
+    --color_black2: rgba(17, 17, 17, 0.925);
+    /* --tranparent: rgba(66, 66, 66, 0.7); */
+    --color_green: rgb(95, 233, 32);
+    --color_violet: rgb(156, 10, 156);
+    --color_blue: rgb(53, 53, 196);
+    --color_blue2: rgb(93, 93, 226);
+    --color_red: red;
+}
+
+.nav_bar_question {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav_bar_question .navbar {
+    width: 100%;
+    background-color: var(--color_cyan);
+}
+
+.nav_bar_question a {
+    display: block;
+    padding: 5px 40px;
+    padding-left: 20px;
+    text-decoration: none;
+    background-color: var(--color_yellow);
+    color: var(--color_white);
+    font-size: 25px;
+}
+
+.link__back i {
+    display: inline;
+    padding-right: 15px;
+    font-size: 25px;
+}
+
+
+/* phần riêng dành cho list */
+.content_detail {
+    width: 90%;
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.content__account-table th {
+    background-color: var(--color_cyan);
+    text-align: center;
+}
+
+.content__account-table td {
+    text-align: center;
+    padding: .50rem;
+    padding-bottom: .30rem;
+}
+
+.list_question {
+    margin-top: 120px;
+    width: 100%;
+    height: 100%;
+}
+
+.list_question h2 {
+    color: var(--color_cyan);
+    text-align: center;
+}
+
+.button_submit {
+    color: var(--color_white);
+    padding: 0px 15px;
+}
+
+/* .outline_button {
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+} */
+.pagination {
+    justify-content: flex-end;
+    margin-right: 5%;
+}
+
+.table-responsive table {
+    min-width: 800px;
+}
+
+/* / phần riêng dành cho list */
+
+/* phần dành riêng cho add */
+/* ADD_question dùng chung cho cả detail */
+.ADD_question h3 {
+    color: var(--color_cyan);
+    text-align: center;
+    margin-top: 100px;
+}
+
+/* btn_form_update dùng chung cho cả detail  */
+.btn_form_update {
+    background-color: var(--color_cyan);
+    color: var(--color_white);
+    padding: 5px 40px;
+}
+
+/* ADD_question dùng chung cho cả detail */
+.ADD_question label {
+    font-weight: 600;
+}
+
+/* error dùng chung cho cả detail */
+.error {
+    font-size: 12px;
+    font-style: italic;
+    color: var(--color_red);
+}
+
+/* phần riêng dành cho detail audio */
+.audio {
+    height: 40px;
+    outline: none;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .nav_bar_question a{
+        font-size: 1.2rem;
+    }
+    .link__back i {
+        padding-top: 3px;
+    }
+    .nav-link i {
+        font-size: 1.2rem;
+    }
+}
+@media screen and (min-width:414px) and (max-width:736px) {
+    .btn_form_update {
+        padding: 5px 20px;
+    }
+    .audio {
+        display: block;
+        margin: 20px 0px;
+    }
+}
